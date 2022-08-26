@@ -1,11 +1,9 @@
-import express from "express"
 import products from "../model/products"
 
 
-const router = express.Router()
 
 // List products
-export const list_producst = async(req, res) => {
+export const list_products = async(req, res) => {
     try {
         const data = await products.find().exec()
         res.json(data)
@@ -17,7 +15,7 @@ export const list_producst = async(req, res) => {
 }
 
 // Add products
-export const add_producst = async(req, res) => {
+export const add_products = async(req, res) => {
     try {
         const data = await new products(req.body).save()
         res.json(data)

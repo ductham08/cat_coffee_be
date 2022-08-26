@@ -1,7 +1,7 @@
 import categories from "../model/categories";
 
 // List all categories
-export const list_products = async(req, res) => {
+export const list_categories = async(req, res) => {
     try {
         const data = await categories.find().exec()
         res.json(data)
@@ -14,7 +14,7 @@ export const list_products = async(req, res) => {
 
 
 // Add categories
-export const add_products = async(req, res) => {
+export const add_categories = async(req, res) => {
     try {
         const data = await new categories(req.body).save()
         res.json(data)

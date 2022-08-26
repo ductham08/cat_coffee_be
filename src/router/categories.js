@@ -1,11 +1,11 @@
 import express from "express"
-import { add_products, list_products } from "../controller/categories"
+import { add_categories, list_categories } from "../controller/categories"
 
 const router = express.Router()
 
 // router
-router.post("/categories", add_products)
-router.get("/categories", list_products)
+router.post("/categories", add_categories)
+router.get("/categories", list_categories)
 
 
 export default router
